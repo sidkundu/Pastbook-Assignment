@@ -1,7 +1,7 @@
 
 ***
-As per the assignment a frontend nodejs application was required. An S2 bucket to save the pictures and a relation DB to store the metadata. 
-## This Solution satisfied below requirements:
+As per the assignment a frontend nodejs application was required. An S3 bucket to save the pictures and a relation DB to store the metadata. 
+## This Solution satisfies below requirements:
 
 ***
 1. Terraform to provision the EKS with EC2 worker nodes
