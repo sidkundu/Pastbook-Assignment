@@ -86,7 +86,7 @@ If you dont have these then please run **setup.sh** if the OS is centos7 it will
 
 -  **terraform plan** : This will show the plan which terraform is going to execute.It will pick up some default variable declared in main.tf file you can override them at runtime as well.
 
-5. **terraform apply** : Enter yes.it takes around 15-18 mins for finish:
+-  **terraform apply** : Enter yes. It takes around 15-18 mins for finish:
 
 >  Entire infrastructure in AWS to setup EKS
 >  Cluster endpoint
