@@ -1,0 +1,6 @@
+Jenkins for Kubernetes deployed!
+
+Get the Jenkins URL
+===================
+Execure: kubectl get svc  {{ .Values.appname }} -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+

@@ -1,0 +1,6 @@
+Sample app deployed!
+
+Get the application URL
+===================
+Execute kubectl get svc {{ .Values.appname }} -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+

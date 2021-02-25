@@ -1,0 +1,50 @@
+# Default values for jenkins-k8s.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+initContainerImage: "ubuntu:latest"
+appname: jenkins-k8s
+replicaCount: 1
+imagePullSecrets:
+image:
+  repository: 083139177360.dkr.ecr.eu-central-1.amazonaws.com/jenkins
+  tag: latest
+  pullPolicy: Always
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      memory: 100Mi
+
+master:
+  adminUser: "admin"
+  adminPassword: "password"
+
+
+
+service:
+  name: jenkins-k8s
+  type: LoadBalancer
+  loadBalancerSourceRanges:
+  - 0.0.0.0/0
+  externalPort: 80
+  internalPort: 8080
+javaOpts: "-Xms512m -Xmx1g"
+resources:
+  requests:
+    cpu: 100m
+    memory: 512Mi
+  limits:
+    memory: 1Gi
+storage:
+  persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+  capacity: 10Gi
+
+jnlp:
+  service:
+    externalPort: 50000
+    internalPort: 50000
